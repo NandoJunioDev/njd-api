@@ -2,6 +2,8 @@ package nandojuniodev.njdbackend.dtos;
 
 
 
-public record RequestDto( String name, String email) {
+public record RequestDto( 
+    
+    String name, String email) {
 
 }
