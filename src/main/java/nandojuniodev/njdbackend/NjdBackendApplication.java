@@ -8,6 +8,8 @@ public class NjdBackendApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NjdBackendApplication.class, args);
+
+							
 	}
 
 }

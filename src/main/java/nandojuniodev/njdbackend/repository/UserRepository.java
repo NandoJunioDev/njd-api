@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import nandojuniodev.njdbackend.model.EntityUser;
 @Repository
+
 public interface UserRepository extends JpaRepository<EntityUser, Long> {
 
 }

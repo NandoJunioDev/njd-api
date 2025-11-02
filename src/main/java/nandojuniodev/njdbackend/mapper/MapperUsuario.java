@@ -15,7 +15,7 @@ public interface MapperUsuario  {
     EntityUser toEntity(RequestDto dto);
 
 
-    
+    // pega de entity e transforma em dto, o que está no paramentro é origem, o que está no retorno é destino
     ResponseDto toDto(EntityUser entity);
 
 }

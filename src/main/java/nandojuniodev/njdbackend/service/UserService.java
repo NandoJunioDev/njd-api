@@ -48,4 +48,15 @@ public UserService(MapperUsuario mapper) {
         return userRepository.findAll();
     }
     
+    public  ResponseDto atualizarUsuario(Long id, RequestDto dto){
+        EntityUser userExistente = userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Usuario nao encontrado"));
+
+        userExistente.setName(dto.name());
+        userExistente.setEmail(dto.email());
+        userExistente.setCpf(dto.cpf());
+
+        EntityUser userAtualizado = userRepository.save(userExistente);
+        return mapper.toDto(userAtualizado);
+    }
 }
